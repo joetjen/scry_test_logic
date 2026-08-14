@@ -51,6 +51,7 @@ defmodule Scry.Test.Logic.Seed do
     ]
   end
 
+  @doc "The `parent/2` goal itself -- `solve_any(parent_clauses(), args)`, the shape `family_tree/0`'s own `conn` map calls by name."
   def parent(args), do: solve_any(parent_clauses(), args)
 
   @doc "age(tom, 60). age(bob, 35). age(ann, 10). age(pat, 8)."
@@ -63,6 +64,7 @@ defmodule Scry.Test.Logic.Seed do
     ]
   end
 
+  @doc "The `age/2` goal itself -- `solve_any(age_clauses(), args)`, the shape `family_tree/0`'s own `conn` map calls by name."
   def age(args), do: solve_any(age_clauses(), args)
 
   @doc """
@@ -83,6 +85,7 @@ defmodule Scry.Test.Logic.Seed do
     ]
   end
 
+  @doc "The `ancestor/2` goal itself -- `solve_any(ancestor_clauses(), args)`, the shape `family_tree/0`'s own `conn` map calls by name."
   def ancestor(args), do: solve_any(ancestor_clauses(), args)
 
   @doc "The `Scry.Logic.Executor.run/3` `conn` shape -- a plain `%{{name, arity} => [clause_fun]}` map."
