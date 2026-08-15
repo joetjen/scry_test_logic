@@ -1,7 +1,7 @@
 defmodule Scry.Test.Logic.Seed do
   @moduledoc """
-  A small family-tree clause database, shaped after lang_spec.md §8.4's
-  own worked example domain (`ancestor`/`parent`/`age`, "bob" included)
+  A small family-tree clause database, shaped after the worked example
+  domain (`ancestor`/`parent`/`age`, "bob" included)
   -- `parent/2` and `age/2` are ground facts; `ancestor/2` is the one
   genuinely recursive relation, written the correct (lazy-wrapped) way
   `Scry.Logic.Executor`'s own moduledoc documents as load-bearing, not
@@ -15,7 +15,7 @@ defmodule Scry.Test.Logic.Seed do
   Deliberately includes a leaf with no descendants (`ann`, `pat`) and an
   age spread crossing common comparison thresholds (8, 10, 35, 60), so
   a query combining the recursive relation with a `WHERE`-embedded goal
-  call (`age(X) > 30`, lang_spec.md §8.4's own worked example) has real
+  call (`age(X) > 30`) has real
   negative cases to exclude, not just positive ones to find.
   """
 

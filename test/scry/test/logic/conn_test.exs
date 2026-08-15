@@ -2,8 +2,8 @@ defmodule Scry.Test.Logic.ConnTest do
   @moduledoc """
   `Scry.Test.Logic.Conn.family_tree/0` -- confirms it returns a real,
   working `conn` (prefilled with `Scry.Test.Logic.Seed`'s own dataset),
-  actually executing the lang_spec.md §8.4 worked example correctly
-  through `Scry.Logic.Executor.run/3`.
+  actually executing the worked example correctly through
+  `Scry.Logic.Executor.run/3`.
   """
 
   use ExUnit.Case, async: true
@@ -26,7 +26,7 @@ defmodule Scry.Test.Logic.ConnTest do
            ]
   end
 
-  test "the lang_spec.md §8.4 worked example runs correctly against this fixture" do
+  test "the worked example runs correctly against this fixture" do
     rows = run!("SELECT ancestor(X, \"bob\") WHERE age(X) > 30 { X }")
 
     # tom (60) is bob's own parent and satisfies age > 30; bob himself
